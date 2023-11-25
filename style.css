@@ -1,0 +1,50 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.wrapper {
+  padding: 15px;
+  color: #fff;
+  font-size: 35px;
+  overflow: hidden;
+}
+.text {
+  color: blueviolet;
+  font-weight: 700;
+  position: relative;
+}
+.text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  animation: vaEtVient 4s infinite linear;
+  border-left: 2px solid blueviolet;
+}
+@keyframes vaEtVient {
+  40%,
+  60% {
+    left: calc(100% + 5px);
+  }
+  100% {
+    left: 0%;
+  }
+}
